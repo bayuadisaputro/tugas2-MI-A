@@ -1,0 +1,58 @@
+#include <stdio.h>
+#include <conio.h>
+
+main () {
+    float s, r, t, VolumeKubus, VolumeSilinder, LuasLingkaran;
+    int pilihan;
+    char back;
+    do {
+    printf("\n===================================================>>");
+    printf("\n\nProgram untuk menghitung Bangun 3 Dimensi(Ruang)\n\nNama = Muhamad Catur Putra\nNIM = 314 3111 022\nProdi = Manajemen Informatika A");
+    printf("\n\n=================================================>>");
+    printf("\n\n1. Menghitung Volume kubus.");
+    printf("\n2. Menghitung Luas Lingkaran.");
+    printf("\n3. Menghitung Volume silinder.");
+    printf("\n\n=================================================>>");
+    printf("\n\nMasukkan pilihan perhitungan yang anda inginkan : "); scanf("%d", &pilihan);
+
+switch (pilihan)
+       {
+           case 1 :
+                {
+                   printf("Masukkan panjang sisi kubus (cm) : "); scanf("%f", &s);
+
+                   VolumeKubus = pow(s,3);
+                   printf("Hasil dari Volume kubus dengan sisi %4.2f = %4.2f cm3", s, VolumeKubus);
+                   break;
+                }
+
+        case 2 :
+                {
+                   printf("Masukkan nilai untuk jari-jari (r) lingkaran (cm):"); scanf("%f", &r);
+
+                   LuasLingkaran = 3.14*pow(r,2);
+                   printf("Hasil dari Luas lingkaran dengan jari-jari (r) lingkaran %4.2f = %4.2f cm2", r, LuasLingkaran);
+                   break;
+                }
+
+        case 3 :
+                {
+                   printf("Masukkan nilai untuk jari-jari (r) lingkaran (cm):"); scanf("%f", &r);
+                   printf("Masukkan nilai untuk tinggi (t) silinder (cm):" ); scanf("%f", &t);
+
+                   VolumeSilinder = 3.14*pow(r,2)*t;
+                   printf("Hasil dari Volume Silinder dengan jari-jari (r) lingkaran %4.2f dan tinggi (t) silinder %4.2f = %4.2f cm3", r, t, VolumeSilinder);
+                   break;
+                 }
+
+         default :
+                 {
+                   printf("Pilihan yang anda masukkan tidak ada dalam daftar.");
+                   printf("\nSilahkan Ulangi Pilihan Anda");
+                   break;
+                 }
+
+        }
+        printf("\n\nIngin Mengulangi Perhitungan? [Y/T] : "); scanf("%s", &back);
+    } while(back!='t');
+}
